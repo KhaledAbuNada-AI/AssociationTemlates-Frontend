@@ -16,18 +16,18 @@
     <!-- Place favicon.ico in the root directory -->
 
     <!-- CSS here -->
-     <link rel="stylesheet" href="{% static 'static_file/css/bootstrap.min.css' %}">
-    <link rel="stylesheet" href="{% static 'static_file/css/owl.carousel.min.css' %}">
-    <link rel="stylesheet" href="{% static 'static_file/css/magnific-popup.css' %}">
-    <link rel="stylesheet" href="{% static 'static_file/css/font-awesome.min.css' %}">
-    <link rel="stylesheet" href="{% static 'static_file/css/themify-icons.css'  %}">
-    <link rel="stylesheet" href="{% static 'static_file/css/nice-select.css' %} ">
-    <link rel="stylesheet" href="{% static 'static_file/css/flaticon.css' %}">
-    <link rel="stylesheet" href="{% static 'static_file/css/gijgo.css' %}">
-    <link rel="stylesheet" href="{% static 'static_file/css/animate.min.css' %}">
-    <link rel="stylesheet" href="{% static 'static_file/css/slicknav.css' %}">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/themify-icons.css">
+    <link rel="stylesheet" href="css/nice-select.css">
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/gijgo.css">
+    <link rel="stylesheet" href="css/animate.min.css">
+    <link rel="stylesheet" href="css/slicknav.css">
 
-    <link rel="stylesheet" href="{% static 'static_file/css/style.css' %}">
+    <link rel="stylesheet" href="css/style.css">
    
     <!-- <link rel="stylesheet" href="css/responsive.css"> -->
 </head>
@@ -44,7 +44,7 @@
                     <div class="col-xl-3 col-lg-2">
                         <div class="logo">
                             <a href="{{index.html}}">
-                                  <img src="{% static 'static_file/img/logo2.png'%}" alt="">
+                                 
                                 <h1>logo</h1>
                             </a>
                         </div>
@@ -55,23 +55,20 @@
                                 <ul id="navigation">
                                    
                                     <li><a href="{% url 'accounts:myprofile' %}">الصفحه الشخصيه </a></li>|
-                                    <li><a href="{{contact.html}}">اتصل بنا</a></li>
+                                    <li><a href="">اتصل بنا</a></li>
                                 </ul>
                             </nav>
                         </div>
                     </div>
                     <div class="col-xl-3 col-lg-3 d-none d-lg-block">
                         <div class="Appointment">
-               {% if user.is_authenticated %}
+              
                             <div class="phone_num d-none d-xl-block">
-                               <a class="boxed-btn3" href="{% url 'accounts:login' %}">سجل الدخول</a>
+                               <a class="boxed-btn3" href="">سجل الدخول</a>
                             </div>
-                        {% else %}
                             <div class="d-none d-lg-block">
                               <a class="boxed-btn3" style="background-color: crimson;" href="{% url 'accounts:signup' %}">التسجيل</a>
-                            </div>
-                         {% endif %}
-                        </div>
+                            </div>                        </div>
                     </div>
                     <div class="col-12">
                         <div class="mobile_menu d-block d-lg-none"></div>
@@ -84,9 +81,52 @@
 </header>
 <!-- header-end -->
 
-{% block body %}
 
-{% endblock %}
+ <div class="catagory_area ">
+<div class="container " style="margin-top: 10rem">
+            <div class=" single_text">
+                   
+                <h3>جمعية بيت الكَرم</h3>
+                <h4> هية جمعية تقدم معونات للاسر المحتاجة والمتعففة في الجزائر</h5>
+                <br>
+            </div>
+            <form  method="GET" action="">
+            <div class="row cat_search" >
+
+                <div class="col-lg-3 col-md-2">
+                    <div class="single_input">
+                        <input type="text" placeholder="إسم المستفيد" >
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-2">
+                    <div class="single_input">
+                        <input type="text" placeholder=" إسم الولاية" >
+                    </div>
+                </div>  
+
+                <div class="col-lg-3 col-md-2">
+                    <div class="single_input">
+                        <input type="number" placeholder=" المدخول الشهري " >
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-2">
+                    <div class="single_input">
+                        <input type="date" placeholder=" تاريخ الميلاد" >
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-md-2 p-3">
+                    <div class="job_btn">
+                        <input type="submit" class="boxed-btn3" value="ابحث هنا">
+                    </div>
+                </div>
+
+            </div>
+            </form> 
+        </div>
+    </div>
 
 <div dir="rtl">
 
@@ -278,36 +318,36 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> جم�
 
 <!-- link that opens popup -->
 <!-- JS here -->
-<script src="{% static 'static_file/js/vendor/modernizr-3.5.0.min.js' %}"></script>
-<script src="{% static 'static_file/js/vendor/jquery-1.12.4.min.js' %}"></script>
-<script src="{% static 'static_file/js/popper.min.js' %}"></script>
-<script src="{% static 'static_file/js/bootstrap.min.js' %}"></script>
-<script src="{% static 'static_file/js/owl.carousel.min.js' %}"></script>
-<script src="{% static 'static_file/js/isotope.pkgd.min.js' %}"></script>
-<script src="{% static 'static_file/js/ajax-form.js' %}"></script>
-<script src="{% static 'static_file/js/waypoints.min.js' %}"></script>
-<script src="{% static 'static_file/js/jquery.counterup.min.js' %}"></script>
-<script src="{% static 'static_file/js/imagesloaded.pkgd.min.js' %}"></script>
-<script src="{% static 'static_file/js/scrollIt.js' %}"></script>
-<script src="{% static 'static_file/js/jquery.scrollUp.min.js' %}"></script>
-<script src="{% static 'static_file/js/wow.min.js' %}"></script>
-<script src="{% static 'static_file/js/nice-select.min.js' %}"></script>
-<script src="{% static 'static_file/js/jquery.slicknav.min.js' %}"></script>
-<script src="{% static 'static_file/js/jquery.magnific-popup.min.js' %}"></script>
-<script src="{% static 'static_file/js/plugins.js' %}"></script>
-<script src="{% static 'static_file/js/gijgo.min.js' %}"></script>
+<script src="js/vendor/modernizr-3.5.0.min.js"></script>
+<script src="js/vendor/jquery-1.12.4.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/owl.carousel.min.js"></script>
+<script src="js/isotope.pkgd.min.js"></script>
+<script src="js/ajax-form.js"></script>
+<script src="js/waypoints.min.js"></script>
+<script src="js/jquery.counterup.min.js"></script>
+<script src="js/imagesloaded.pkgd.min.js"></script>
+<script src="js/scrollIt.js"></script>
+<script src="js/jquery.scrollUp.min.js"></script>
+<script src="js/wow.min.js"></script>
+<script src="js/nice-select.min.js"></script>
+<script src="js/jquery.slicknav.min.js"></script>
+<script src="js/jquery.magnific-popup.min.js"></script>
+<script src="js/plugins.js"></script>
+<script src="js/gijgo.min.js"></script>
 
 
 
 <!--contact js-->
-<script src="{% static 'static_file/js/contact.js' %}"></script>
-<script src="{% static 'static_file/js/jquery.ajaxchimp.min.js' %}"></script>
-<script src="{% static 'static_file/js/jquery.form.js' %}"></script>
-<script src="{% static 'static_file/js/jquery.validate.min.js' %}"></script>
-<script src="{% static 'static_file/js/mail-script.js' %}"></script>
+<script src="js/contact.js"></script>
+<script src="js/jquery.ajaxchimp.min.js"></script>
+<script src="js/jquery.form.js"></script>
+<script src="js/jquery.validate.min.js"></script>
+<script src="js/mail-script.js"></script>
 
 
-<script src="{% static 'static_file/js/main.js' %}"></script>
+<script src="js/main.js"></script>
 </body>
 
 </html>
